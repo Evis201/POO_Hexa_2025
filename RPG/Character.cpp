@@ -30,7 +30,12 @@ void Character::receiveDammages(int dammages)
 
 void Character::attack(Character &target)
 {
-    target.receiveDammages(equipedWeapon.getDammages());
+    if (isAlive()) {
+        std::cout << name << " attaque " << target.name << " qui a infligé " << equipedWeapon.getDammages() << " dégats." << std::endl;
+        target.receiveDammages(equipedWeapon.getDammages());
+    } else {
+        std::cout << name << " Bah non on attaque pas un mort ?" << std::endl;
+    }
 }
 
 void Character::takeLifeCroquette(int lifePoints)

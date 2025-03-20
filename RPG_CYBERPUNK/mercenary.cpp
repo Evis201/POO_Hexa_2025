@@ -6,8 +6,8 @@
 
 Mercenary::Mercenary(std::string firstName, std::string lastName, int lifePoints, int reputation, int money, MercenaryType type)
 {
-    this->firstName = firstName;
-    this->lastName = lastName;
+    this->firstName = std::move(firstName);
+    this->lastName = std::move(lastName);
     this->lifePoints = lifePoints;
     this->reputation = reputation;
     this->money = money;

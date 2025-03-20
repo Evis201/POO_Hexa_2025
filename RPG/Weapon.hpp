@@ -5,6 +5,7 @@
 #pragma once
 
 // Création de la classe Weapon
+
 class Weapon {
 private:
     std::string name;

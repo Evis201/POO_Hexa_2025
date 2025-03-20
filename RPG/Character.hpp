@@ -6,6 +6,7 @@
 #pragma once
 
 // Création de la classe Character
+
 class Character {
 private:
     std::string name;

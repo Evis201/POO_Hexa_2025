@@ -3,6 +3,7 @@
 #include "Character.hpp"
 
 // Création de la classe Character
+
 Character::Character()
 {
     name = "";

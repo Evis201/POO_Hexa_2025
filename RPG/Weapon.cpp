@@ -3,6 +3,7 @@
 #include "Weapon.hpp"
 
 // Création de la classe Weapon
+
 Weapon::Weapon() : name("Épée en bois"), dammages(10) {}
 Weapon::Weapon(std::string newName, int newDammages) : name(newName), dammages(newDammages) {}
 

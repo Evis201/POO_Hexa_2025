@@ -5,7 +5,13 @@
 // Création de la classe Character
 
 Character::Character(std::string firstName, std::string lastName, int lifePoints, int reputation, int money)
-    : firstName(firstName), lastName(lastName), lifePoints(lifePoints), reputation(reputation), money(money) {}
+{
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->lifePoints = lifePoints;
+    this->reputation = reputation;
+    this->money = money;
+}
 
 Character::~Character() {}
 

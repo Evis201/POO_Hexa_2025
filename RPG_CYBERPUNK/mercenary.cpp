@@ -5,7 +5,14 @@
 // Création de la classe Mercenary
 
 Mercenary::Mercenary(std::string firstName, std::string lastName, int lifePoints, int reputation, int money, MercenaryType type)
-    : Character(firstName, lastName, lifePoints, reputation, money), type(type) {}
+{
+    this->firstName = firstName;
+    this->lastName = lastName;
+    this->lifePoints = lifePoints;
+    this->reputation = reputation;
+    this->money = money;
+    this->type = type;
+}
 
 void Mercenary::attack(Character &target) {
     int damage = 10;

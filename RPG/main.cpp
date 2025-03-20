@@ -35,6 +35,16 @@ int main() {
     cosmo.display();
     tornade.display();
 
+    cosmo.magicAttack(tornade, 20, 40);
+
+    cosmo.display();
+    tornade.display();
+
+    tornade.magicAttack(cosmo, 15, 30);
+
+    cosmo.display();
+    tornade.display();
+
     cosmo.takeLifeCroquette(20);
     tornade.attack(cosmo);
 

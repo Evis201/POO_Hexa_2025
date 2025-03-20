@@ -1,6 +1,7 @@
 // SRC : POO/Character.hpp 
 //
 #include "Weapon.hpp"
+#include <iostream>
 #include <string>
 #pragma once
 
@@ -23,4 +24,5 @@ public:
     void switchWeapon(std::string weaponName, int weaponDammages);
     bool isAlive();
     void display();
+    void magicAttack(Character &target, int manaCost, int magicDammages);
 };

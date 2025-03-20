@@ -1,7 +1,6 @@
 // SRC : POO/Weapon.cpp 
 //
 #include "Weapon.hpp"
-#include <iostream>
 
 // Création de la classe Weapon
 Weapon::Weapon() : name("Épée en bois"), dammages(10) {}

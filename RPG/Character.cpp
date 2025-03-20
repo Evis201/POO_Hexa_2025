@@ -1,7 +1,6 @@
 // SRC : POO/Character.cpp 
 //
 #include "Character.hpp"
-#include <iostream>
 
 // Création de la classe Character
 Character::Character()
@@ -34,8 +33,25 @@ void Character::attack(Character &target)
         std::cout << name << " attaque " << target.name << " qui a infligé " << equipedWeapon.getDammages() << " dégats." << std::endl;
         target.receiveDammages(equipedWeapon.getDammages());
     } else {
-        std::cout << name << " Bah non on attaque pas un mort ?" << std::endl;
+        std::cout << name << " Bah non on attaque pas en étant mort ?" << std::endl;
     }
+}
+
+void Character::magicAttack(Character &target, int manaCost, int magicDammages)
+{
+    if (!isAlive()) {
+        std::cout << name << " Bah non pas de spell en étant mort.. " << std::endl;
+        return;
+    }
+
+    if (mana < manaCost) {
+        std::cout << name << " No mana help this guys pls." << std::endl;
+        return;
+    }
+    
+    mana -= manaCost;
+    std::cout << name << " lance un sort magique sur " << target.name << " en lui faisant " << magicDammages << " dégâts magiques." << std::endl;
+    target.receiveDammages(magicDammages);
 }
 
 void Character::takeLifeCroquette(int lifePoints)

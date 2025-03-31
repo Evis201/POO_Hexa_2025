@@ -9,8 +9,8 @@
 #include "Artefact.hpp"
 
 int main() {
-    SpiderMan spidey("Spider-Man");
-    IronMan tony("Iron Man");
+    SpiderMan spidey("Homme Araignée");
+    IronMan tony("Homme de fer");
     SpaceStone stone;
     BrokenGlove glove;
     
